@@ -17,9 +17,10 @@
       </template>
 
       <img
-        height="auto"
+        height="200"
         width="100%"
         src="../assets/img/card_bg.jpg"
+        class="card_cover"
       >
 
       <v-card-title class="flex flex-column align-start">
@@ -147,4 +148,9 @@ export default {
 }
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+    .card_cover {
+        object-fit: cover;
+        object-position: center;
+    }
+</style>

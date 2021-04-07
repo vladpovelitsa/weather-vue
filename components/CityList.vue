@@ -1,7 +1,7 @@
 <template>
   <div id="CityList">
     <v-row>
-      <v-col cols="12" md="6" lg="4" v-if="lat && lon">
+      <v-col cols="12" md="6" lg="4" xl="3" v-if="lat && lon">
         <CityCard :cityLon="lon" :cityLat="lat" @removingCity="removeCity">
           <template v-slot:home>
             <div class="d-flex blue--text mr-4" small>
@@ -17,8 +17,9 @@
         md="6"
         align="start"
         lg="4"
+        xl="3"
         v-for="(city, key) in this.cities"
-        v-bind:key="key"
+        v-bind:key="city"
       >
         <CityCard :cityName="city" :id="key" @removingCity="removeCity">
           <template v-slot:home>
